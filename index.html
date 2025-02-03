@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>F24 API</title>
+  </head>
+  <body>
+    <section class="wrapper">
+        <h3>Information about flights from F24 API ✈️</h3>
+        <div>
+            <h4>How I approached the task?</h4>
+            <p>1. Set up environemnt to use API. First, testing a lot in Sandbox</p>
+            <p>2. When sandbox gave some results, I moved to VSC. I was using JavaScript. </p>
+            <p>3. I started by definings my constants. I used fetch method for fethcing API. I made a get request to the API, querying both flights to/from Arlanda. If the request is unsuccessful (res.ok === false), an error is logged with "Houston, we got a problem!", and an exception is thrown. If the request succeeds, the flight data is extracted from data.data. </p>
+            <p> 4. To save credits, I saved this information to json (using File saver lib) file and I was working on the data in another file 😊</p>
+            <p>5. I made functions to retrive the needed data</p>
+        </div>
+        <div id="allPlanesLanding" class="json"></div>
+        <div id="numberFlights"></div>
+        <div id="popularRoutes"></div>
+        <div id="popularAirline"></div>
+        <h4>Summarize</h4>
+        <p>Api doesn't provide the information about how many flights are taking off from Arlanda at the specific time (7-8pm) immediately. We only know ETA of the flights. We would need to calculate the difference between the flights using lat and lon and then count the average time of traveling this distance and calculate if from eta.  </p>
+
+        <p>Insights learnt: Vocabulary used in the industry. Difference in iata/icao. Need to specify the time on the website (time zone) </p>
+    </section>
+    <script src="./results.js"></script>
+    <!--     <script src="./results.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+  </body>
+</html>
