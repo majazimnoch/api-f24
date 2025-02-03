@@ -5,5 +5,6 @@ This project fetches live flight positions from the FlightRadar24 API and saves 
 ## 🚀 Features
 - Fetches real-time flight data.
 - The script uses FileSaver.js to download JSON data.
-- There are two js files: one for fetching (script.js), and one for working on the data (results.js). 
+- There are two js files: one for fetching (script.js), and one for working on the data (results.js).
+- Results.js uses the data from the json file, it's not based on the current live information
 
